@@ -110,6 +110,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "LOG IN";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -134,7 +135,7 @@
             this.panel1.Controls.Add(this.password);
             this.panel1.Controls.Add(this.username);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(406, 251);
+            this.panel1.Location = new System.Drawing.Point(406, 220);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 574);
             this.panel1.TabIndex = 5;
