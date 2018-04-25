@@ -60,7 +60,7 @@ namespace Focusinc
 
         private void settings_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
     }
 }
