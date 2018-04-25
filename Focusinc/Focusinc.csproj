@@ -108,6 +108,45 @@
   <ItemGroup>
     <None Include="Resources\exit1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-user11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\specialist-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-avatar-main-picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warranty1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warranty2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
