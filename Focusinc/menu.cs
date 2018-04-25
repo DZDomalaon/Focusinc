@@ -19,7 +19,9 @@ namespace Focusinc
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            settings.Visible = true;
+            settings.Location = new Point(414, 146);
+            settings.Size = new Size(1130, 624);
         }
 
         private void menu_Load(object sender, EventArgs e)
@@ -38,6 +40,25 @@ namespace Focusinc
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            loginForm back = new Focusinc.loginForm();
+            back.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            settings.Location = new Point(450, 620);
+            settings.Size = new Size(210, 150);
+            settings.Visible = false;
+        }
+
+        private void settings_Paint(object sender, PaintEventArgs e)
         {
 
         }
