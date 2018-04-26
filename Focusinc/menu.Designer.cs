@@ -37,6 +37,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.settings = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.usenLbl = new System.Windows.Forms.Label();
+            this.userBtn = new System.Windows.Forms.Button();
+            this.unameTxt = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,17 +50,11 @@
             this.cpsswrdTxt = new System.Windows.Forms.TextBox();
             this.npsswrdTxt = new System.Windows.Forms.TextBox();
             this.passBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.opsswrdTxt = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.usenLbl = new System.Windows.Forms.Label();
-            this.userBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.unameTxt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.settings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -161,7 +161,7 @@
             this.settings.Controls.Add(this.label7);
             this.settings.Controls.Add(this.label2);
             this.settings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.settings.Location = new System.Drawing.Point(450, 597);
+            this.settings.Location = new System.Drawing.Point(382, 470);
             this.settings.Name = "settings";
             this.settings.Size = new System.Drawing.Size(199, 196);
             this.settings.TabIndex = 11;
@@ -181,6 +181,79 @@
             this.button6.Text = "CANCEL";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.usenLbl);
+            this.panel1.Controls.Add(this.userBtn);
+            this.panel1.Controls.Add(this.unameTxt);
+            this.panel1.Location = new System.Drawing.Point(229, 112);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(596, 129);
+            this.panel1.TabIndex = 44;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(12, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 20);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Enter username";
+            // 
+            // usenLbl
+            // 
+            this.usenLbl.AutoSize = true;
+            this.usenLbl.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usenLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.usenLbl.Location = new System.Drawing.Point(167, 85);
+            this.usenLbl.Name = "usenLbl";
+            this.usenLbl.Size = new System.Drawing.Size(58, 18);
+            this.usenLbl.TabIndex = 42;
+            this.usenLbl.Text = "----------";
+            this.usenLbl.Visible = false;
+            // 
+            // userBtn
+            // 
+            this.userBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
+            this.userBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userBtn.ForeColor = System.Drawing.Color.White;
+            this.userBtn.Location = new System.Drawing.Point(425, 49);
+            this.userBtn.Name = "userBtn";
+            this.userBtn.Size = new System.Drawing.Size(78, 35);
+            this.userBtn.TabIndex = 2;
+            this.userBtn.Text = "Update";
+            this.userBtn.UseVisualStyleBackColor = false;
+            // 
+            // unameTxt
+            // 
+            this.unameTxt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unameTxt.Location = new System.Drawing.Point(170, 56);
+            this.unameTxt.Name = "unameTxt";
+            this.unameTxt.Size = new System.Drawing.Size(234, 26);
+            this.unameTxt.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(77)))), ((int)(((byte)(86)))));
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.psswrdLbl);
+            this.panel2.Controls.Add(this.cpsswrdTxt);
+            this.panel2.Controls.Add(this.npsswrdTxt);
+            this.panel2.Controls.Add(this.passBtn);
+            this.panel2.Controls.Add(this.opsswrdTxt);
+            this.panel2.Location = new System.Drawing.Point(229, 296);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(596, 199);
+            this.panel2.TabIndex = 45;
             // 
             // label5
             // 
@@ -260,18 +333,6 @@
             this.passBtn.Text = "Update";
             this.passBtn.UseVisualStyleBackColor = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(49)))), ((int)(((byte)(55)))));
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(450, 257);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 22);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Change Password";
-            // 
             // opsswrdTxt
             // 
             this.opsswrdTxt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -281,54 +342,26 @@
             this.opsswrdTxt.Size = new System.Drawing.Size(234, 26);
             this.opsswrdTxt.TabIndex = 3;
             // 
-            // label6
+            // panel3
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 56);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 20);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Enter username";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(49)))), ((int)(((byte)(55)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(199, 57);
+            this.panel3.TabIndex = 43;
             // 
-            // usenLbl
+            // label1
             // 
-            this.usenLbl.AutoSize = true;
-            this.usenLbl.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usenLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.usenLbl.Location = new System.Drawing.Point(167, 85);
-            this.usenLbl.Name = "usenLbl";
-            this.usenLbl.Size = new System.Drawing.Size(58, 18);
-            this.usenLbl.TabIndex = 42;
-            this.usenLbl.Text = "----------";
-            this.usenLbl.Visible = false;
-            // 
-            // userBtn
-            // 
-            this.userBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
-            this.userBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userBtn.ForeColor = System.Drawing.Color.White;
-            this.userBtn.Location = new System.Drawing.Point(425, 49);
-            this.userBtn.Name = "userBtn";
-            this.userBtn.Size = new System.Drawing.Size(78, 35);
-            this.userBtn.TabIndex = 2;
-            this.userBtn.Text = "Update";
-            this.userBtn.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.usenLbl);
-            this.panel1.Controls.Add(this.userBtn);
-            this.panel1.Controls.Add(this.unameTxt);
-            this.panel1.Location = new System.Drawing.Point(229, 112);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(596, 129);
-            this.panel1.TabIndex = 44;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(418, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(236, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Account Settings";
             // 
             // label7
             // 
@@ -342,50 +375,17 @@
             this.label7.TabIndex = 40;
             this.label7.Text = "Change Username";
             // 
-            // unameTxt
+            // label2
             // 
-            this.unameTxt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unameTxt.Location = new System.Drawing.Point(170, 56);
-            this.unameTxt.Name = "unameTxt";
-            this.unameTxt.Size = new System.Drawing.Size(234, 26);
-            this.unameTxt.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(418, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Account Settings";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(77)))), ((int)(((byte)(86)))));
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.psswrdLbl);
-            this.panel2.Controls.Add(this.cpsswrdTxt);
-            this.panel2.Controls.Add(this.npsswrdTxt);
-            this.panel2.Controls.Add(this.passBtn);
-            this.panel2.Controls.Add(this.opsswrdTxt);
-            this.panel2.Location = new System.Drawing.Point(229, 296);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(596, 199);
-            this.panel2.TabIndex = 45;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(49)))), ((int)(((byte)(55)))));
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(199, 57);
-            this.panel3.TabIndex = 43;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(49)))), ((int)(((byte)(55)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(450, 257);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 22);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Change Password";
             // 
             // menu
             // 
