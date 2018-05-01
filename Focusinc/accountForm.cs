@@ -16,5 +16,15 @@ namespace Focusinc
         {
             InitializeComponent();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void accountForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
