@@ -16,7 +16,21 @@ namespace Focusinc
         {
             InitializeComponent();
         }
+        public static menuForm fromAsset { get; set; }
+        private void assetForm_Load(object sender, EventArgs e)
+        {
 
-       
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fromAsset.Show();
+        }
+
+        private void assetForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fromAsset.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Focusinc
 {
-    partial class menu
+    partial class menuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.custBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuForm));
+            this.assetsBtn = new System.Windows.Forms.Button();
+            this.historyBtn = new System.Windows.Forms.Button();
+            this.accountsBtn = new System.Windows.Forms.Button();
+            this.employeeBtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.settingsBtn = new System.Windows.Forms.Button();
             this.settings = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,95 +61,94 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // assetsBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(96)))), ((int)(((byte)(176)))));
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(889, 483);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(253, 165);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "ASSETS";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.assetsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(96)))), ((int)(((byte)(176)))));
+            this.assetsBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assetsBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.assetsBtn.Image = ((System.Drawing.Image)(resources.GetObject("assetsBtn.Image")));
+            this.assetsBtn.Location = new System.Drawing.Point(889, 483);
+            this.assetsBtn.Name = "assetsBtn";
+            this.assetsBtn.Size = new System.Drawing.Size(253, 165);
+            this.assetsBtn.TabIndex = 10;
+            this.assetsBtn.Text = "ASSETS";
+            this.assetsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.assetsBtn.UseVisualStyleBackColor = false;
+            this.assetsBtn.Click += new System.EventHandler(this.assetsBtn_Click);
             // 
-            // button4
+            // historyBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1160, 300);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(235, 250);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "HISTORY";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.historyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.historyBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.historyBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.historyBtn.Image = ((System.Drawing.Image)(resources.GetObject("historyBtn.Image")));
+            this.historyBtn.Location = new System.Drawing.Point(1160, 300);
+            this.historyBtn.Name = "historyBtn";
+            this.historyBtn.Size = new System.Drawing.Size(235, 250);
+            this.historyBtn.TabIndex = 10;
+            this.historyBtn.Text = "HISTORY";
+            this.historyBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.historyBtn.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // accountsBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(889, 299);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(253, 169);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "ACCOUNTS";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.accountsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
+            this.accountsBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountsBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.accountsBtn.Image = ((System.Drawing.Image)(resources.GetObject("accountsBtn.Image")));
+            this.accountsBtn.Location = new System.Drawing.Point(889, 299);
+            this.accountsBtn.Name = "accountsBtn";
+            this.accountsBtn.Size = new System.Drawing.Size(253, 169);
+            this.accountsBtn.TabIndex = 10;
+            this.accountsBtn.Text = "ACCOUNTS";
+            this.accountsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.accountsBtn.UseVisualStyleBackColor = false;
+            this.accountsBtn.Click += new System.EventHandler(this.accountsBtn_Click);
             // 
-            // custBtn
+            // employeeBtn
             // 
-            this.custBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(80)))), ((int)(((byte)(34)))));
-            this.custBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.custBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.custBtn.Image = ((System.Drawing.Image)(resources.GetObject("custBtn.Image")));
-            this.custBtn.Location = new System.Drawing.Point(619, 300);
-            this.custBtn.Name = "custBtn";
-            this.custBtn.Size = new System.Drawing.Size(253, 169);
-            this.custBtn.TabIndex = 9;
-            this.custBtn.Text = "EMPLOYEE";
-            this.custBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.custBtn.UseVisualStyleBackColor = false;
+            this.employeeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(80)))), ((int)(((byte)(34)))));
+            this.employeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.employeeBtn.Image = ((System.Drawing.Image)(resources.GetObject("employeeBtn.Image")));
+            this.employeeBtn.Location = new System.Drawing.Point(619, 300);
+            this.employeeBtn.Name = "employeeBtn";
+            this.employeeBtn.Size = new System.Drawing.Size(253, 169);
+            this.employeeBtn.TabIndex = 9;
+            this.employeeBtn.Text = "EMPLOYEE";
+            this.employeeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.employeeBtn.UseVisualStyleBackColor = false;
+            this.employeeBtn.Click += new System.EventHandler(this.employeeBtn_Click);
             // 
-            // button2
+            // logoutBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(251)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(1160, 565);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(235, 83);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "LOG OUT";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(251)))));
+            this.logoutBtn.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
+            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.logoutBtn.Location = new System.Drawing.Point(1160, 565);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(235, 83);
+            this.logoutBtn.TabIndex = 1;
+            this.logoutBtn.Text = "LOG OUT";
+            this.logoutBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // settingsBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(619, 483);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(253, 165);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "SETTINGS";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
+            this.settingsBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settingsBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingsBtn.Image")));
+            this.settingsBtn.Location = new System.Drawing.Point(619, 483);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Size = new System.Drawing.Size(253, 165);
+            this.settingsBtn.TabIndex = 0;
+            this.settingsBtn.Text = "SETTINGS";
+            this.settingsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // settings
             // 
@@ -387,19 +386,19 @@
             this.label2.TabIndex = 40;
             this.label2.Text = "Change Password";
             // 
-            // menu
+            // menuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.settings);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.custBtn);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "menu";
+            this.Controls.Add(this.assetsBtn);
+            this.Controls.Add(this.historyBtn);
+            this.Controls.Add(this.accountsBtn);
+            this.Controls.Add(this.employeeBtn);
+            this.Controls.Add(this.logoutBtn);
+            this.Controls.Add(this.settingsBtn);
+            this.Name = "menuForm";
             this.Text = "menu";
             this.Load += new System.EventHandler(this.menu_Load);
             this.settings.ResumeLayout(false);
@@ -416,12 +415,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button custBtn;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button settingsBtn;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button employeeBtn;
+        private System.Windows.Forms.Button accountsBtn;
+        private System.Windows.Forms.Button historyBtn;
+        private System.Windows.Forms.Button assetsBtn;
         private System.Windows.Forms.Panel settings;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;

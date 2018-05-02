@@ -17,6 +17,8 @@ namespace Focusinc
             InitializeComponent();
         }
 
+        public static menuForm fromAccounts { get; set; }
+
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -25,6 +27,17 @@ namespace Focusinc
         private void accountForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void accountsBack_Btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fromAccounts.Show();
+        }
+
+        private void accountForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fromAccounts.Show();
         }
     }
 }

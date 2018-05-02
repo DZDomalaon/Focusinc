@@ -39,7 +39,7 @@ namespace Focusinc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            menu menu = new Focusinc.menu();
+            menuForm menu = new Focusinc.menuForm();
             menu.Show();
             this.Hide();
         }
