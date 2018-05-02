@@ -31,7 +31,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`Assets` (
   `ASSET_ID` INT NOT NULL AUTO_INCREMENT,
   `MOUSE` VARCHAR(45) NULL,
-  `PC` VARCHAR(45) NULL,
+  `PC_ASSET_NO` VARCHAR(45) NULL,
+  `PC_NAME` VARCHAR(45) NULL,
   `KEYBOARD` VARCHAR(45) NULL,
   `HEADSET` VARCHAR(45) NULL,
   `MONITOR` VARCHAR(45) NULL,
@@ -48,37 +49,38 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Person`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Person` (
-  `PERSON_ID` INT NOT NULL,
-  `FIRSTNAME` VARCHAR(45) NULL,
-  `LASTNAME` VARCHAR(45) NULL,
-  `STATUS` VARCHAR(45) NULL,
-  `PERSON_ASSET_ID` INT NOT NULL,
-  PRIMARY KEY (`PERSON_ID`),
-  INDEX `fk_Person_Assets1_idx` (`PERSON_ASSET_ID` ASC),
-  CONSTRAINT `fk_Person_Assets1`
-    FOREIGN KEY (`PERSON_ASSET_ID`)
-    REFERENCES `mydb`.`Assets` (`ASSET_ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `mydb`.`Accounts`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Accounts` (
   `ACCOUNT_ID` INT NOT NULL,
   `ACCOUNT_NAME` VARCHAR(45) NULL,
   `ACCOUNT_STATUS` VARCHAR(45) NULL,
-  `ACCOUNT_PERSON_ID` INT NOT NULL,
-  PRIMARY KEY (`ACCOUNT_ID`),
-  INDEX `fk_Accounts_Person_idx` (`ACCOUNT_PERSON_ID` ASC),
-  CONSTRAINT `fk_Accounts_Person`
-    FOREIGN KEY (`ACCOUNT_PERSON_ID`)
-    REFERENCES `mydb`.`Person` (`PERSON_ID`)
+  PRIMARY KEY (`ACCOUNT_ID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Person`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Person` (
+  `PERSON_ID` INT NOT NULL,
+  `FIRSTNAME` VARCHAR(45) NULL,
+  `LASTNAME` VARCHAR(45) NULL,
+  `POSITION` INT NULL,
+  `STATUS` VARCHAR(45) NULL,
+  `PERSON_ASSET_ID` INT NOT NULL,
+  `PERSON_ACCOUNT_ID` INT NOT NULL,
+  PRIMARY KEY (`PERSON_ID`),
+  INDEX `fk_Person_Assets1_idx` (`PERSON_ASSET_ID` ASC),
+  INDEX `fk_Person_Accounts1_idx` (`PERSON_ACCOUNT_ID` ASC),
+  CONSTRAINT `fk_Person_Assets1`
+    FOREIGN KEY (`PERSON_ASSET_ID`)
+    REFERENCES `mydb`.`Assets` (`ASSET_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Person_Accounts1`
+    FOREIGN KEY (`PERSON_ACCOUNT_ID`)
+    REFERENCES `mydb`.`Accounts` (`ACCOUNT_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -122,6 +124,23 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Working_place` (
   INDEX `fk_Working_place_Person1_idx` (`WP_PERSON_ID` ASC),
   CONSTRAINT `fk_Working_place_Person1`
     FOREIGN KEY (`WP_PERSON_ID`)
+    REFERENCES `mydb`.`Person` (`PERSON_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Login`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Login` (
+  `LOGIN_ID` INT NOT NULL,
+  `USERNAME` VARCHAR(45) NULL,
+  `PASSWORD` VARCHAR(45) NULL,
+  `LOGIN_PERSON_ID` INT NOT NULL,
+  INDEX `fk_Login_Person1_idx` (`LOGIN_PERSON_ID` ASC),
+  CONSTRAINT `fk_Login_Person1`
+    FOREIGN KEY (`LOGIN_PERSON_ID`)
     REFERENCES `mydb`.`Person` (`PERSON_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
