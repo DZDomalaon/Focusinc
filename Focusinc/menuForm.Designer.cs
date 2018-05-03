@@ -89,6 +89,7 @@
             this.historyBtn.Text = "HISTORY";
             this.historyBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.historyBtn.UseVisualStyleBackColor = false;
+            this.historyBtn.Click += new System.EventHandler(this.historyBtn_Click);
             // 
             // accountsBtn
             // 
@@ -390,7 +391,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.settings);
             this.Controls.Add(this.assetsBtn);
             this.Controls.Add(this.historyBtn);
@@ -399,7 +400,9 @@
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.settingsBtn);
             this.Name = "menuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.menuForm_FormClosing);
             this.Load += new System.EventHandler(this.menu_Load);
             this.settings.ResumeLayout(false);
             this.settings.PerformLayout();

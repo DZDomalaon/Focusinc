@@ -16,5 +16,18 @@ namespace Focusinc
         {
             InitializeComponent();
         }
+
+        public static menuForm fromHistory { get; set; }
+
+        private void historyForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fromHistory.Show();
+        }
     }
 }

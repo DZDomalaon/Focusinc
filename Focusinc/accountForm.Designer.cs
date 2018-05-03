@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.accountsBack_Btn);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1357, 42);
+            this.panel1.Size = new System.Drawing.Size(1997, 42);
             this.panel1.TabIndex = 3;
             // 
             // dateLabel
@@ -77,7 +77,7 @@
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.Color.White;
-            this.dateLabel.Location = new System.Drawing.Point(1077, 10);
+            this.dateLabel.Location = new System.Drawing.Point(1717, 10);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(95, 23);
             this.dateLabel.TabIndex = 20;
@@ -100,7 +100,7 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1096, 513);
+            this.button3.Location = new System.Drawing.Point(1736, 873);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 33);
             this.button3.TabIndex = 13;
@@ -112,7 +112,7 @@
             this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(473, 538);
+            this.radioButton2.Location = new System.Drawing.Point(473, 898);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(94, 25);
             this.radioButton2.TabIndex = 8;
@@ -125,7 +125,7 @@
             this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(363, 538);
+            this.radioButton1.Location = new System.Drawing.Point(363, 898);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(81, 25);
             this.radioButton1.TabIndex = 7;
@@ -138,7 +138,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(359, 513);
+            this.label3.Location = new System.Drawing.Point(359, 873);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 19);
             this.label3.TabIndex = 9;
@@ -150,7 +150,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(678, 51);
+            this.label6.Location = new System.Drawing.Point(1318, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 23);
             this.label6.TabIndex = 15;
@@ -178,11 +178,11 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(623, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(943, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(614, 414);
+            this.dataGridView1.Size = new System.Drawing.Size(934, 774);
             this.dataGridView1.TabIndex = 20;
             // 
             // Column2
@@ -211,7 +211,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(614, 414);
+            this.dataGridView2.Size = new System.Drawing.Size(934, 774);
             this.dataGridView2.TabIndex = 18;
             // 
             // label1
@@ -238,7 +238,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.09678F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1240, 420);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1880, 780);
             this.tableLayoutPanel1.TabIndex = 21;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -247,7 +247,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 513);
+            this.label2.Location = new System.Drawing.Point(12, 873);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 19);
             this.label2.TabIndex = 22;
@@ -257,7 +257,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(16, 535);
+            this.textBox1.Location = new System.Drawing.Point(16, 895);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(306, 26);
             this.textBox1.TabIndex = 23;
@@ -275,7 +275,7 @@
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(810, 51);
+            this.textBox3.Location = new System.Drawing.Point(1450, 51);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(306, 26);
             this.textBox3.TabIndex = 25;
@@ -300,7 +300,7 @@
             this.button6.FlatAppearance.BorderSize = 2;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1114, 51);
+            this.button6.Location = new System.Drawing.Point(1754, 51);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(78, 26);
             this.button6.TabIndex = 27;
@@ -313,7 +313,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = global::Focusinc.Properties.Resources.two_circling_arrows;
-            this.button7.Location = new System.Drawing.Point(450, 602);
+            this.button7.Location = new System.Drawing.Point(450, 952);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(42, 35);
             this.button7.TabIndex = 48;
@@ -326,7 +326,7 @@
             this.button8.FlatAppearance.BorderSize = 2;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(16, 602);
+            this.button8.Location = new System.Drawing.Point(16, 952);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(246, 35);
             this.button8.TabIndex = 49;
@@ -340,7 +340,7 @@
             this.button4.FlatAppearance.BorderSize = 2;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(268, 602);
+            this.button4.Location = new System.Drawing.Point(268, 952);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(176, 35);
             this.button4.TabIndex = 50;
@@ -351,7 +351,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -371,6 +371,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "accountForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "accountForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.accountForm_FormClosing);
             this.Load += new System.EventHandler(this.accountForm_Load);

@@ -16,7 +16,7 @@ namespace Focusinc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new historyForm());
+            Application.Run(new loginForm());
         }
     }
 }

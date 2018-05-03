@@ -84,7 +84,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(-4, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1374, 42);
+            this.panel1.Size = new System.Drawing.Size(1908, 42);
             this.panel1.TabIndex = 0;
             // 
             // label11
@@ -104,7 +104,7 @@
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.Color.White;
-            this.dateLabel.Location = new System.Drawing.Point(1076, 12);
+            this.dateLabel.Location = new System.Drawing.Point(1610, 12);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(95, 23);
             this.dateLabel.TabIndex = 4;
@@ -138,7 +138,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1346, 658);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1880, 980);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel2
@@ -478,11 +478,11 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            this.dataGridView1.Location = new System.Drawing.Point(233, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(325, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1110, 652);
+            this.dataGridView1.Size = new System.Drawing.Size(1552, 974);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -549,10 +549,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 719);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "assetForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "assetForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.assetForm_FormClosing);
             this.Load += new System.EventHandler(this.assetForm_Load);

@@ -64,5 +64,18 @@ namespace Focusinc
             assetForm.fromAsset = this;
             this.Hide();
         }
+
+        private void historyBtn_Click(object sender, EventArgs e)
+        {
+            historyForm history = new historyForm();
+            history.Show();
+            historyForm.fromHistory = this;
+            this.Hide();
+        }
+        
+
+        private void menuForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }
