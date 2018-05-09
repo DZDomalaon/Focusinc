@@ -16,7 +16,6 @@ namespace Focusinc
         {
             InitializeComponent();
         }
-        public virtual Size AutoScaleBaseSize { get; set; }
         public static menuForm fromAccounts { get; set; }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
