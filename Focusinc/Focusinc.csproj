@@ -71,12 +71,6 @@
     <Compile Include="historyForm.Designer.cs">
       <DependentUpon>historyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="loginForm.Designer.cs">
-      <DependentUpon>loginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="menuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +96,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="historyForm.resx">
       <DependentUpon>historyForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="loginForm.resx">
-      <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuForm.resx">
       <DependentUpon>menuForm.cs</DependentUpon>

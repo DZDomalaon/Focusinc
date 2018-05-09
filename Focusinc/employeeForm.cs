@@ -30,14 +30,20 @@ namespace Focusinc
             timer1.Start();
         }
 
-        private void employeeBack_Btn_Click(object sender, EventArgs e)
+        private void employeeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Close();
             fromEmployee.Show();
         }
 
-        private void employeeForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void addEmployeeBtn_Click(object sender, EventArgs e)
         {
+            //string insertToPerson = "INSERT TO PERSON(FIRSTNAME, LASTNAME, POSITION, STATUS, GMAILL_ACC, SKYPE_ACC) " +
+            //                        "VALUES('" + + "'");
+        }
+
+        private void employeeBack_Btn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
             fromEmployee.Show();
         }
     }

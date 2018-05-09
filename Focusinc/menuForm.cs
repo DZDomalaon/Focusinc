@@ -17,28 +17,9 @@ namespace Focusinc
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            settings.Visible = true;
-            settings.Location = new Point(414, 146);
-            settings.Size = new Size(1130, 624);
-        }
-
         private void menu_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            settings.Location = new Point(450, 620);
-            settings.Size = new Size(210, 150);
-            settings.Visible = false;
-        }
-
-        private void settings_Paint(object sender, PaintEventArgs e)
-        {
-            
         }
 
         private void employeeBtn_Click(object sender, EventArgs e)
@@ -62,6 +43,14 @@ namespace Focusinc
             assetForm asset = new assetForm();
             asset.Show();
             assetForm.fromAsset = this;
+            this.Hide();
+        }
+
+        private void historyBtn_Click(object sender, EventArgs e)
+        {
+            historyForm history = new historyForm();
+            history.Show();
+            historyForm.fromHistory = this;
             this.Hide();
         }
     }

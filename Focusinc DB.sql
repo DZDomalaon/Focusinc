@@ -5,143 +5,148 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema focusinc
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema focusinc
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `focusinc` DEFAULT CHARACTER SET utf8 ;
+USE `focusinc` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`PC_Lifespan`
+-- Table `focusinc`.`accounts`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`PC_Lifespan` (
-  `PL_ID` INT NOT NULL,
-  `MANUFACTURED_DATE` DATE NULL,
-  `PC_MONTH&YEAR` VARCHAR(45) NULL,
-  PRIMARY KEY (`PL_ID`))
-ENGINE = InnoDB;
+CREATE TABLE IF NOT EXISTS `focusinc`.`accounts` (
+  `ACCOUNT_ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `ACCOUNT_NAME` VARCHAR(45) NULL DEFAULT NULL,
+  `ACCOUNT_STATUS` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`ACCOUNT_ID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Assets`
+-- Table `focusinc`.`PC_properties`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Assets` (
-  `ASSET_ID` INT NOT NULL AUTO_INCREMENT,
-  `MOUSE` VARCHAR(45) NULL,
+CREATE TABLE IF NOT EXISTS `focusinc`.`PC_properties` (
+  `PC_ID` INT(11) NOT NULL AUTO_INCREMENT,
   `PC_ASSET_NO` VARCHAR(45) NULL,
   `PC_NAME` VARCHAR(45) NULL,
-  `KEYBOARD` VARCHAR(45) NULL,
-  `HEADSET` VARCHAR(45) NULL,
-  `MONITOR` VARCHAR(45) NULL,
-  `WEBCAM` VARCHAR(45) NULL,
-  `ASSET_PL_ID` INT NOT NULL,
+  `MANUFACTURED_DATE` DATE NULL DEFAULT NULL,
+  `PC_MONTH&YEAR` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`PC_ID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `focusinc`.`assets`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `focusinc`.`assets` (
+  `ASSET_ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `MOUSE` VARCHAR(45) NULL DEFAULT NULL,
+  `KEYBOARD` VARCHAR(45) NULL DEFAULT NULL,
+  `HEADSET` VARCHAR(45) NULL DEFAULT NULL,
+  `MONITOR` VARCHAR(45) NULL DEFAULT NULL,
+  `WEBCAM` VARCHAR(45) NULL DEFAULT NULL,
+  `TELEPHONE` VARCHAR(45) NULL,
+  `ASSET_PC_ID` INT(11) NOT NULL,
   PRIMARY KEY (`ASSET_ID`),
-  INDEX `fk_Assets_PC_LIFESPAN1_idx` (`ASSET_PL_ID` ASC),
-  CONSTRAINT `fk_Assets_PC_LIFESPAN1`
-    FOREIGN KEY (`ASSET_PL_ID`)
-    REFERENCES `mydb`.`PC_Lifespan` (`PL_ID`)
+  INDEX `fk_assets_pc_lifespan1_idx` (`ASSET_PC_ID` ASC),
+  CONSTRAINT `fk_assets_pc_lifespan1`
+    FOREIGN KEY (`ASSET_PC_ID`)
+    REFERENCES `focusinc`.`PC_properties` (`PC_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Accounts`
+-- Table `focusinc`.`person`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Accounts` (
-  `ACCOUNT_ID` INT NOT NULL,
-  `ACCOUNT_NAME` VARCHAR(45) NULL,
-  `ACCOUNT_STATUS` VARCHAR(45) NULL,
-  PRIMARY KEY (`ACCOUNT_ID`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Person`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Person` (
-  `PERSON_ID` INT NOT NULL,
-  `FIRSTNAME` VARCHAR(45) NULL,
-  `LASTNAME` VARCHAR(45) NULL,
-  `POSITION` INT NULL,
-  `STATUS` VARCHAR(45) NULL,
-  `PERSON_ASSET_ID` INT NOT NULL,
-  `PERSON_ACCOUNT_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `focusinc`.`person` (
+  `PERSON_ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `FIRSTNAME` VARCHAR(45) NULL DEFAULT NULL,
+  `LASTNAME` VARCHAR(45) NULL DEFAULT NULL,
+  `POSITION` INT(11) NULL DEFAULT NULL,
+  `STATUS` VARCHAR(45) NULL DEFAULT NULL,
+  `PERSON_ACCOUNT_ID` INT(11) NULL,
   PRIMARY KEY (`PERSON_ID`),
-  INDEX `fk_Person_Assets1_idx` (`PERSON_ASSET_ID` ASC),
-  INDEX `fk_Person_Accounts1_idx` (`PERSON_ACCOUNT_ID` ASC),
-  CONSTRAINT `fk_Person_Assets1`
-    FOREIGN KEY (`PERSON_ASSET_ID`)
-    REFERENCES `mydb`.`Assets` (`ASSET_ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Person_Accounts1`
+  INDEX `fk_person_accounts1_idx` (`PERSON_ACCOUNT_ID` ASC),
+  CONSTRAINT `fk_person_accounts1`
     FOREIGN KEY (`PERSON_ACCOUNT_ID`)
-    REFERENCES `mydb`.`Accounts` (`ACCOUNT_ID`)
+    REFERENCES `focusinc`.`accounts` (`ACCOUNT_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`History`
+-- Table `focusinc`.`history`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`History` (
-  `HISTORY_ID` INT NOT NULL,
-  `DT_TRANSACTION` DATETIME NULL,
-  `TYPE` VARCHAR(45) NULL,
-  `DESCRIPTION` VARCHAR(45) NULL,
-  `HISTORY_PERSON_ID` INT NULL,
-  `HISTORY_ASSET_ID` INT NULL,
+CREATE TABLE IF NOT EXISTS `focusinc`.`history` (
+  `HISTORY_ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `DT_TRANSACTION` DATETIME NULL DEFAULT NULL,
+  `TYPE` VARCHAR(45) NULL DEFAULT NULL,
+  `DESCRIPTION` VARCHAR(45) NULL DEFAULT NULL,
+  `HISTORY_PERSON_ID` INT(11) NULL,
+  `HISTORY_ASSET_ID` INT(11) NULL,
   PRIMARY KEY (`HISTORY_ID`),
-  INDEX `fk_History_Person1_idx` (`HISTORY_PERSON_ID` ASC),
-  INDEX `fk_History_Assets1_idx` (`HISTORY_ASSET_ID` ASC),
-  CONSTRAINT `fk_History_Person1`
-    FOREIGN KEY (`HISTORY_PERSON_ID`)
-    REFERENCES `mydb`.`Person` (`PERSON_ID`)
+  INDEX `fk_history_person1_idx` (`HISTORY_PERSON_ID` ASC),
+  INDEX `fk_history_assets1_idx` (`HISTORY_ASSET_ID` ASC),
+  CONSTRAINT `fk_history_assets1`
+    FOREIGN KEY (`HISTORY_ASSET_ID`)
+    REFERENCES `focusinc`.`assets` (`ASSET_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_History_Assets1`
-    FOREIGN KEY (`HISTORY_ASSET_ID`)
-    REFERENCES `mydb`.`Assets` (`ASSET_ID`)
+  CONSTRAINT `fk_history_person1`
+    FOREIGN KEY (`HISTORY_PERSON_ID`)
+    REFERENCES `focusinc`.`person` (`PERSON_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Working_place`
+-- Table `focusinc`.`working_place`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Working_place` (
-  `WP_ID` INT NOT NULL,
-  `FLOOR` VARCHAR(45) NULL,
-  `WORKSTATION_NO` VARCHAR(45) NULL,
-  `WP_PERSON_ID` INT NOT NULL,
-  PRIMARY KEY (`WP_ID`),
-  INDEX `fk_Working_place_Person1_idx` (`WP_PERSON_ID` ASC),
-  CONSTRAINT `fk_Working_place_Person1`
-    FOREIGN KEY (`WP_PERSON_ID`)
-    REFERENCES `mydb`.`Person` (`PERSON_ID`)
+CREATE TABLE IF NOT EXISTS `focusinc`.`working_place` (
+  `WP_ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `FLOOR` VARCHAR(45) NULL DEFAULT NULL,
+  `WORKSTATION_NO` VARCHAR(45) NULL DEFAULT NULL,
+  `REMARKS` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`WP_ID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `focusinc`.`working_place_hasPA`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `focusinc`.`working_place_hasPA` (
+  `WPH_PERSON_ID` INT(11) NULL,
+  `WPH_WP_ID` INT(11) NULL,
+  `WPH_ASSET_ID` INT(11) NULL,
+  INDEX `fk_table1_person1_idx` (`WPH_PERSON_ID` ASC),
+  INDEX `fk_table1_working_place1_idx` (`WPH_WP_ID` ASC),
+  INDEX `fk_table1_assets1_idx` (`WPH_ASSET_ID` ASC),
+  CONSTRAINT `fk_table1_person1`
+    FOREIGN KEY (`WPH_PERSON_ID`)
+    REFERENCES `focusinc`.`person` (`PERSON_ID`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Login`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Login` (
-  `LOGIN_ID` INT NOT NULL,
-  `USERNAME` VARCHAR(45) NULL,
-  `PASSWORD` VARCHAR(45) NULL,
-  `LOGIN_PERSON_ID` INT NOT NULL,
-  INDEX `fk_Login_Person1_idx` (`LOGIN_PERSON_ID` ASC),
-  CONSTRAINT `fk_Login_Person1`
-    FOREIGN KEY (`LOGIN_PERSON_ID`)
-    REFERENCES `mydb`.`Person` (`PERSON_ID`)
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_table1_working_place1`
+    FOREIGN KEY (`WPH_WP_ID`)
+    REFERENCES `focusinc`.`working_place` (`WP_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_table1_assets1`
+    FOREIGN KEY (`WPH_ASSET_ID`)
+    REFERENCES `focusinc`.`assets` (`ASSET_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
