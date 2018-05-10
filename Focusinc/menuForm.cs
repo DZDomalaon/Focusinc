@@ -53,5 +53,13 @@ namespace Focusinc
             historyForm.fromHistory = this;
             this.Hide();
         }
+
+        private void workstationBtn_Click(object sender, EventArgs e)
+        {
+            workStationForm workstation = new workStationForm();
+            workstation.Show();
+            workStationForm.fromWorkstation = this;
+            this.Hide();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
@@ -37,8 +38,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.employeeRemoveBtn = new System.Windows.Forms.Button();
+            this.employeeNewBtn = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,16 +59,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.assetTimer = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,7 +88,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(-4, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1374, 42);
+            this.panel1.Size = new System.Drawing.Size(1354, 42);
             this.panel1.TabIndex = 0;
             // 
             // label11
@@ -104,7 +108,7 @@
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.Color.White;
-            this.dateLabel.Location = new System.Drawing.Point(1076, 12);
+            this.dateLabel.Location = new System.Drawing.Point(932, 8);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(107, 22);
             this.dateLabel.TabIndex = 4;
@@ -116,7 +120,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::Focusinc.Properties.Resources.left_arrow;
-            this.button1.Location = new System.Drawing.Point(3, 2);
+            this.button1.Location = new System.Drawing.Point(3, -1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 39);
             this.button1.TabIndex = 3;
@@ -134,20 +138,21 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.85398F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 49);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 38);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1346, 658);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1351, 689);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.employeeRemoveBtn);
+            this.panel2.Controls.Add(this.employeeNewBtn);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label10);
@@ -166,9 +171,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(3, 18);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(224, 652);
+            this.panel2.Size = new System.Drawing.Size(221, 652);
             this.panel2.TabIndex = 0;
             // 
             // textBox7
@@ -180,7 +185,7 @@
             this.textBox7.Location = new System.Drawing.Point(16, 33);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(192, 23);
+            this.textBox7.Size = new System.Drawing.Size(189, 23);
             this.textBox7.TabIndex = 48;
             // 
             // button4
@@ -208,35 +213,37 @@
             this.label14.TabIndex = 46;
             this.label14.Text = "Calculated";
             // 
-            // button3
+            // employeeRemoveBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(123, 613);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 35);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = false;
+            this.employeeRemoveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.employeeRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
+            this.employeeRemoveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
+            this.employeeRemoveBtn.FlatAppearance.BorderSize = 2;
+            this.employeeRemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeRemoveBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeRemoveBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.employeeRemoveBtn.Location = new System.Drawing.Point(123, 613);
+            this.employeeRemoveBtn.Name = "employeeRemoveBtn";
+            this.employeeRemoveBtn.Size = new System.Drawing.Size(96, 35);
+            this.employeeRemoveBtn.TabIndex = 44;
+            this.employeeRemoveBtn.Text = "Remove";
+            this.employeeRemoveBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // employeeNewBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(182)))), ((int)(((byte)(71)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(182)))), ((int)(((byte)(71)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(3, 614);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 35);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Create New";
-            this.button2.UseVisualStyleBackColor = false;
+            this.employeeNewBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.employeeNewBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(182)))), ((int)(((byte)(71)))));
+            this.employeeNewBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(182)))), ((int)(((byte)(71)))));
+            this.employeeNewBtn.FlatAppearance.BorderSize = 2;
+            this.employeeNewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeNewBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeNewBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.employeeNewBtn.Location = new System.Drawing.Point(3, 614);
+            this.employeeNewBtn.Name = "employeeNewBtn";
+            this.employeeNewBtn.Size = new System.Drawing.Size(115, 35);
+            this.employeeNewBtn.TabIndex = 43;
+            this.employeeNewBtn.Text = "Create New";
+            this.employeeNewBtn.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -270,10 +277,10 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(13, 470);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 20);
+            this.label10.Size = new System.Drawing.Size(104, 18);
             this.label10.TabIndex = 35;
             this.label10.Text = "Current Date:";
             // 
@@ -285,6 +292,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(192, 22);
             this.dateTimePicker1.TabIndex = 34;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 5, 9, 17, 52, 5, 0);
             // 
             // label9
             // 
@@ -321,7 +329,7 @@
             this.textBox6.Location = new System.Drawing.Point(16, 372);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(192, 23);
+            this.textBox6.Size = new System.Drawing.Size(189, 23);
             this.textBox6.TabIndex = 31;
             // 
             // label6
@@ -346,7 +354,7 @@
             this.textBox5.Location = new System.Drawing.Point(16, 316);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 23);
+            this.textBox5.Size = new System.Drawing.Size(189, 23);
             this.textBox5.TabIndex = 29;
             // 
             // label5
@@ -371,7 +379,7 @@
             this.textBox4.Location = new System.Drawing.Point(16, 258);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 23);
+            this.textBox4.Size = new System.Drawing.Size(189, 23);
             this.textBox4.TabIndex = 27;
             // 
             // label4
@@ -396,7 +404,7 @@
             this.textBox3.Location = new System.Drawing.Point(16, 201);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 23);
+            this.textBox3.Size = new System.Drawing.Size(189, 23);
             this.textBox3.TabIndex = 25;
             // 
             // label3
@@ -421,7 +429,7 @@
             this.textBox1.Location = new System.Drawing.Point(16, 144);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 23);
+            this.textBox1.Size = new System.Drawing.Size(189, 23);
             this.textBox1.TabIndex = 23;
             // 
             // label2
@@ -459,34 +467,42 @@
             this.textBox2.Location = new System.Drawing.Point(16, 88);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 23);
+            this.textBox2.Size = new System.Drawing.Size(189, 23);
             this.textBox2.TabIndex = 19;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column12,
+            this.Column8,
+            this.Column10,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6,
             this.Column7,
-            this.Column8,
             this.Column9,
-            this.Column10});
-            this.dataGridView1.Location = new System.Drawing.Point(233, 3);
+            this.Column11});
+            this.dataGridView1.Location = new System.Drawing.Point(234, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1110, 652);
+            this.dataGridView1.Size = new System.Drawing.Size(1114, 683);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // assetTimer
+            // 
+            this.assetTimer.Tick += new System.EventHandler(this.assetTimer_Tick);
             // 
             // Column1
             // 
@@ -499,6 +515,24 @@
             this.Column2.HeaderText = "PC Name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "PC Tag";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Manufactured Date";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Life Span";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // Column3
             // 
@@ -530,29 +564,23 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Manufactured Date";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
             // Column9
             // 
-            this.Column9.HeaderText = "Current Date";
+            this.Column9.HeaderText = "Telephone";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
-            // Column10
+            // Column11
             // 
-            this.Column10.HeaderText = "Life Span";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
+            this.Column11.HeaderText = "UPS";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // assetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 719);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "assetForm";
@@ -581,16 +609,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -609,9 +627,22 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button employeeRemoveBtn;
+        private System.Windows.Forms.Button employeeNewBtn;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Timer assetTimer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

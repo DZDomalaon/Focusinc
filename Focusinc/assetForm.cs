@@ -19,7 +19,8 @@ namespace Focusinc
         public static menuForm fromAsset { get; set; }
         private void assetForm_Load(object sender, EventArgs e)
         {
-
+            assetTimer.Start();
+            dateLabel.Text = DateTime.Now.ToLongDateString() + "      " + DateTime.Now.ToLongTimeString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,6 +32,12 @@ namespace Focusinc
         private void assetForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             fromAsset.Show();
+        }
+
+        private void assetTimer_Tick(object sender, EventArgs e)
+        {
+            dateLabel.Text = DateTime.Now.ToLongDateString() + "      " + DateTime.Now.ToLongTimeString();
+            assetTimer.Start();
         }
     }
 }

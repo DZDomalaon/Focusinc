@@ -28,5 +28,11 @@ namespace Focusinc
         {
             fromHistory.Show();
         }
+
+        private void historyBack_Btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fromHistory.Show();
+        }
     }
 }

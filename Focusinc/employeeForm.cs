@@ -21,7 +21,7 @@ namespace Focusinc
         private void employeeForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            dateLabel.Text = DateTime.Now.ToLongDateString() + "      "+ DateTime.Now.ToLongTimeString();
+            dateLabel.Text = DateTime.Now.ToLongDateString() + "      " + DateTime.Now.ToLongTimeString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

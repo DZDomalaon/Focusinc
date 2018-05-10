@@ -16,5 +16,23 @@ namespace Focusinc
         {
             InitializeComponent();
         }
+
+        public static menuForm fromWorkstation { get; set; }
+
+        private void workStationForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void workStationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fromWorkstation.Show();
+        }
+
+        private void workstationBack_Btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fromWorkstation.Show();
+        }
     }
 }

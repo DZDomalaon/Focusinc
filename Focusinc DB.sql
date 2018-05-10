@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `focusinc`.`assets` (
   `MONITOR` VARCHAR(45) NULL DEFAULT NULL,
   `WEBCAM` VARCHAR(45) NULL DEFAULT NULL,
   `TELEPHONE` VARCHAR(45) NULL,
+  `UPS` VARCHAR(45) NULL,
   `ASSET_PC_ID` INT(11) NOT NULL,
   PRIMARY KEY (`ASSET_ID`),
   INDEX `fk_assets_pc_lifespan1_idx` (`ASSET_PC_ID` ASC),
@@ -70,8 +71,10 @@ CREATE TABLE IF NOT EXISTS `focusinc`.`person` (
   `PERSON_ID` INT(11) NOT NULL AUTO_INCREMENT,
   `FIRSTNAME` VARCHAR(45) NULL DEFAULT NULL,
   `LASTNAME` VARCHAR(45) NULL DEFAULT NULL,
-  `POSITION` INT(11) NULL DEFAULT NULL,
+  `POSITION` VARCHAR(45) NULL DEFAULT NULL,
   `STATUS` VARCHAR(45) NULL DEFAULT NULL,
+  `GMAIL_ACC` VARCHAR(45) NULL DEFAULT NULL,
+  `SKYPE_ACC` VARCHAR(45) NULL DEFAULT NULL,
   `PERSON_ACCOUNT_ID` INT(11) NULL,
   PRIMARY KEY (`PERSON_ID`),
   INDEX `fk_person_accounts1_idx` (`PERSON_ACCOUNT_ID` ASC),
@@ -112,14 +115,30 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
+-- Table `focusinc`.`floor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `focusinc`.`floor` (
+  `FLOOR_ID` INT NOT NULL,
+  `FLOOR_NAME` VARCHAR(45) NULL,
+  PRIMARY KEY (`FLOOR_ID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `focusinc`.`working_place`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `focusinc`.`working_place` (
   `WP_ID` INT(11) NOT NULL AUTO_INCREMENT,
-  `FLOOR` VARCHAR(45) NULL DEFAULT NULL,
   `WORKSTATION_NO` VARCHAR(45) NULL DEFAULT NULL,
   `REMARKS` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`WP_ID`))
+  `WP_FLOOR_ID` INT NOT NULL,
+  PRIMARY KEY (`WP_ID`),
+  INDEX `fk_working_place_floor1_idx` (`WP_FLOOR_ID` ASC),
+  CONSTRAINT `fk_working_place_floor1`
+    FOREIGN KEY (`WP_FLOOR_ID`)
+    REFERENCES `focusinc`.`floor` (`FLOOR_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
