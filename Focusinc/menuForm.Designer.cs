@@ -134,7 +134,6 @@
             this.Controls.Add(this.workstationBtn);
             this.Name = "menuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.menu_Load);
             this.ResumeLayout(false);

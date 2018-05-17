@@ -21,7 +21,8 @@ namespace Focusinc
 
         private void workStationForm_Load(object sender, EventArgs e)
         {
-
+            wsTimer.Start();
+            dateLabel.Text = DateTime.Now.ToLongDateString() + "      " + DateTime.Now.ToLongTimeString();            
         }
 
         private void workStationForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -33,6 +34,12 @@ namespace Focusinc
         {
             this.Close();
             fromWorkstation.Show();
+        }
+
+        private void wsTimer_Tick(object sender, EventArgs e)
+        {
+            dateLabel.Text = DateTime.Now.ToLongDateString() + "      " + DateTime.Now.ToLongTimeString();
+            wsTimer.Start();
         }
     }
 }

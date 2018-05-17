@@ -21,7 +21,8 @@ namespace Focusinc
 
         private void historyForm_Load(object sender, EventArgs e)
         {
-
+            historyTimer.Start();
+            dateLabel.Text = DateTime.Now.ToLongDateString() + "      " + DateTime.Now.ToLongTimeString();            
         }
 
         private void historyForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -33,6 +34,12 @@ namespace Focusinc
         {
             this.Close();
             fromHistory.Show();
+        }
+
+        private void historyTimer_Tick(object sender, EventArgs e)
+        {
+            dateLabel.Text = DateTime.Now.ToLongDateString() + "      " + DateTime.Now.ToLongTimeString();
+            historyTimer.Start();
         }
     }
 }
